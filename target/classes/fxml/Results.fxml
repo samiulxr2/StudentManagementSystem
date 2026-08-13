@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.sms.controller.ResultController"
+            style="-fx-background-color:#071923;">
+
+    <!-- ========================================================= -->
+    <!-- TOP -->
+    <!-- ========================================================= -->
+
+    <top>
+
+        <HBox alignment="CENTER_LEFT"
+              spacing="15"
+              style="-fx-background-color:#0A202C;
+                     -fx-padding:18 24 18 24;
+                     -fx-border-color:#183B49;
+                     -fx-border-width:0 0 1 0;">
+
+            <Label text="Result Management"
+                   style="-fx-font-size:28px;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:#D8F0F4;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Label text="Student Academic Result"
+                   style="-fx-font-size:13px;
+                          -fx-text-fill:#7899A4;"/>
+
+        </HBox>
+
+    </top>
+
+
+    <!-- ========================================================= -->
+    <!-- CENTER -->
+    <!-- ========================================================= -->
+
+    <center>
+
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    style="-fx-background-color:#071923;
+                           -fx-background:#071923;
+                           -fx-border-color:transparent;">
+
+            <content>
+
+                <VBox spacing="20"
+                      fillWidth="true"
+                      style="-fx-background-color:#071923;">
+
+                    <padding>
+                        <Insets top="24"
+                                right="24"
+                                bottom="30"
+                                left="24"/>
+                    </padding>
+
+
+                    <!-- ================================================= -->
+                    <!-- FIND STUDENT RESULTS -->
+                    <!-- ================================================= -->
+
+                    <VBox spacing="16"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:24;">
+
+                        <Label text="Find Student Results"
+                               style="-fx-font-size:21px;
+                                      -fx-font-weight:bold;
+                                      -fx-text-fill:#D8F0F4;"/>
+
+                        <Label text="Enter the student information and load the registered courses for the selected semester."
+                               style="-fx-text-fill:#7699A4;
+                                      -fx-font-size:13px;"/>
+
+
+                        <GridPane hgap="18"
+                                  vgap="16"
+                                  maxWidth="Infinity">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="16"/>
+
+                                <ColumnConstraints percentWidth="34"
+                                                   hgrow="ALWAYS"/>
+
+                                <ColumnConstraints percentWidth="16"/>
+
+                                <ColumnConstraints percentWidth="34"
+                                                   hgrow="ALWAYS"/>
+
+                            </columnConstraints>
+
+
+                            <!-- STUDENT ID -->
+
+                            <Label text="Student ID"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <TextField fx:id="studentIdField"
+                                       promptText="Example: 251-15-500"
+                                       maxWidth="Infinity"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-width:1;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;
+                                              -fx-padding:11 13;"/>
+
+
+                            <!-- SECTION -->
+
+                            <Label text="Section"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <ComboBox fx:id="sectionBox"
+                                      promptText="Select Section"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="0"
+                                      GridPane.columnIndex="3"
+                                      style="-fx-background-color:#102A36;
+                                             -fx-border-color:#245363;
+                                             -fx-border-width:1;
+                                             -fx-border-radius:9;
+                                             -fx-background-radius:9;"/>
+
+
+                            <!-- SEMESTER -->
+
+                            <Label text="Semester"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <ComboBox fx:id="semesterBox"
+                                      promptText="Select Semester"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="1"
+                                      GridPane.columnIndex="1"
+                                      style="-fx-background-color:#102A36;
+                                             -fx-border-color:#245363;
+                                             -fx-border-width:1;
+                                             -fx-border-radius:9;
+                                             -fx-background-radius:9;"/>
+
+                        </GridPane>
+
+
+                        <HBox spacing="12">
+
+                            <Button fx:id="loadCoursesButton"
+                                    text="Load Registered Courses"
+                                    onAction="#loadRegisteredCourses"
+                                    style="-fx-background-color:#18AEB5;
+                                           -fx-text-fill:white;
+                                           -fx-font-size:13px;
+                                           -fx-font-weight:bold;
+                                           -fx-background-radius:9;
+                                           -fx-padding:11 20;
+                                           -fx-cursor:hand;"/>
+
+                            <Button text="Clear"
+                                    onAction="#clearFields"
+                                    style="-fx-background-color:#143440;
+                                           -fx-text-fill:#C7E3E8;
+                                           -fx-font-size:13px;
+                                           -fx-font-weight:bold;
+                                           -fx-border-color:#245363;
+                                           -fx-border-width:1;
+                                           -fx-border-radius:9;
+                                           -fx-background-radius:9;
+                                           -fx-padding:11 20;
+                                           -fx-cursor:hand;"/>
+
+                        </HBox>
+
+                    </VBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- REGISTERED COURSES -->
+                    <!-- ================================================= -->
+
+                    <VBox spacing="15"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:20;">
+
+                        <HBox alignment="CENTER_LEFT">
+
+                            <Label text="Registered Courses"
+                                   style="-fx-font-size:20px;
+                                          -fx-font-weight:bold;
+                                          -fx-text-fill:#D8F0F4;"/>
+
+                            <Region HBox.hgrow="ALWAYS"/>
+
+                            <Label text="Select a course to enter its result."
+                                   style="-fx-text-fill:#6F919B;
+                                          -fx-font-size:12px;"/>
+
+                        </HBox>
+
+
+                        <TableView fx:id="courseTable"
+                                   prefHeight="220"
+                                   minHeight="180"
+                                   maxWidth="Infinity"
+                                   style="-fx-background-color:#0A202B;
+                                          -fx-control-inner-background:#0A202B;
+                                          -fx-border-color:#1B4655;
+                                          -fx-border-width:1;
+                                          -fx-border-radius:12;
+                                          -fx-background-radius:12;">
+
+                            <columns>
+
+                                <TableColumn fx:id="courseCodeColumn"
+                                             text="Course Code"
+                                             prefWidth="160"/>
+
+                                <TableColumn fx:id="courseNameColumn"
+                                             text="Course Name"
+                                             prefWidth="330"/>
+
+                                <TableColumn fx:id="courseCreditColumn"
+                                             text="Credit"
+                                             prefWidth="120"/>
+
+                                <TableColumn fx:id="courseTypeColumn"
+                                             text="Type"
+                                             prefWidth="180"/>
+
+                            </columns>
+
+                        </TableView>
+
+                    </VBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- SELECTED COURSE -->
+                    <!-- ================================================= -->
+
+                    <VBox spacing="15"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:20;">
+
+                        <Label text="Selected Course"
+                               style="-fx-font-size:20px;
+                                      -fx-font-weight:bold;
+                                      -fx-text-fill:#D8F0F4;"/>
+
+
+                        <GridPane hgap="20"
+                                  vgap="12">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="17"/>
+
+                                <ColumnConstraints percentWidth="33"
+                                                   hgrow="ALWAYS"/>
+
+                                <ColumnConstraints percentWidth="17"/>
+
+                                <ColumnConstraints percentWidth="33"
+                                                   hgrow="ALWAYS"/>
+
+                            </columnConstraints>
+
+
+                            <Label text="Course"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#89AEB8;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="selectedCourseLabel"
+                                   text="No Course Selected"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"
+                                   style="-fx-text-fill:#D8F0F4;
+                                          -fx-font-weight:bold;"/>
+
+
+                            <Label text="Course Type"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#89AEB8;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="selectedCourseTypeLabel"
+                                   text="-"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="3"
+                                   style="-fx-text-fill:#D8F0F4;"/>
+
+
+                            <Label text="Credit"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#89AEB8;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="selectedCourseCreditLabel"
+                                   text="-"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="1"
+                                   style="-fx-text-fill:#D8F0F4;"/>
+
+                        </GridPane>
+
+                    </VBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- THEORY ASSESSMENT -->
+                    <!-- ================================================= -->
+
+                    <VBox fx:id="theoryPane"
+                          spacing="14"
+                          visible="false"
+                          managed="false"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:20;">
+
+                        <Label text="Theory Assessment"
+                               style="-fx-font-size:20px;
+                                      -fx-font-weight:bold;
+                                      -fx-text-fill:#D8F0F4;"/>
+
+
+                        <GridPane hgap="18"
+                                  vgap="14">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="18"/>
+
+                                <ColumnConstraints percentWidth="32"
+                                                   hgrow="ALWAYS"/>
+
+                                <ColumnConstraints percentWidth="18"/>
+
+                                <ColumnConstraints percentWidth="32"
+                                                   hgrow="ALWAYS"/>
+
+                            </columnConstraints>
+
+
+                            <Label text="Attendance"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="theoryAttendanceField"
+                                       promptText="0 - 10"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Quiz 1"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="quiz1Field"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Quiz 2"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="quiz2Field"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="2"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Quiz 3"
+                                   GridPane.rowIndex="3"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="quiz3Field"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="3"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Quiz Average"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="quizAverageField"
+                                       editable="false"
+                                       promptText="Automatically calculated"
+                                       GridPane.rowIndex="4"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#0A202B;
+                                              -fx-text-fill:#8FB9C4;
+                                              -fx-border-color:#1C4655;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Midterm"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="midtermField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="3"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Presentation"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="presentationField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="3"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Assignment"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="assignmentField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="2"
+                                       GridPane.columnIndex="3"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Final Exam"
+                                   GridPane.rowIndex="3"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="theoryFinalField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="3"
+                                       GridPane.columnIndex="3"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+                        </GridPane>
+
+                    </VBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- LAB ASSESSMENT -->
+                    <!-- ================================================= -->
+
+                    <VBox fx:id="labPane"
+                          spacing="14"
+                          visible="false"
+                          managed="false"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:20;">
+
+                        <Label text="Lab Assessment"
+                               style="-fx-font-size:20px;
+                                      -fx-font-weight:bold;
+                                      -fx-text-fill:#D8F0F4;"/>
+
+
+                        <GridPane hgap="18"
+                                  vgap="14">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="18"/>
+
+                                <ColumnConstraints percentWidth="32"
+                                                   hgrow="ALWAYS"/>
+
+                                <ColumnConstraints percentWidth="18"/>
+
+                                <ColumnConstraints percentWidth="32"
+                                                   hgrow="ALWAYS"/>
+
+                            </columnConstraints>
+
+
+                            <Label text="Attendance"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="labAttendanceField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Class Performance"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="classPerformanceField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Lab Report"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="labReportField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="3"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+
+                            <Label text="Lab Final"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;"/>
+
+                            <TextField fx:id="labFinalField"
+                                       promptText="Marks"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="3"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#E0F3F6;
+                                              -fx-prompt-text-fill:#628592;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;"/>
+
+                        </GridPane>
+
+                    </VBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- CALCULATED RESULT -->
+                    <!-- ================================================= -->
+
+                    <VBox spacing="15"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:20;">
+
+                        <Label text="Calculated Result"
+                               style="-fx-font-size:20px;
+                                      -fx-font-weight:bold;
+                                      -fx-text-fill:#D8F0F4;"/>
+
+
+                        <GridPane hgap="18"
+                                  vgap="14">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="18"/>
+
+                                <ColumnConstraints percentWidth="32"
+                                                   hgrow="ALWAYS"/>
+
+                                <ColumnConstraints percentWidth="18"/>
+
+                                <ColumnConstraints percentWidth="32"
+                                                   hgrow="ALWAYS"/>
+
+                            </columnConstraints>
+
+
+                            <Label text="Total Marks / 100"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-weight:bold;"/>
+
+                            <TextField fx:id="totalMarksField"
+                                       editable="false"
+                                       promptText="Automatically calculated"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#D8F0F4;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;
+                                              -fx-font-weight:bold;"/>
+
+
+                            <Label text="Grade"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-weight:bold;"/>
+
+                            <TextField fx:id="gradeField"
+                                       editable="false"
+                                       promptText="Automatically calculated"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="3"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#35D399;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;
+                                              -fx-font-weight:bold;"/>
+
+
+                            <Label text="GPA"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-weight:bold;"/>
+
+                            <TextField fx:id="gpaField"
+                                       editable="false"
+                                       promptText="Automatically calculated"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="1"
+                                       style="-fx-background-color:#102A36;
+                                              -fx-text-fill:#35D399;
+                                              -fx-border-color:#245363;
+                                              -fx-border-radius:9;
+                                              -fx-background-radius:9;
+                                              -fx-font-weight:bold;"/>
+
+                        </GridPane>
+
+
+                        <!-- ACTION BUTTONS -->
+
+                        <HBox spacing="12">
+
+                            <Button text="Save Result"
+                                    onAction="#saveResult"
+                                    style="-fx-background-color:#18AEB5;
+                                           -fx-text-fill:white;
+                                           -fx-font-weight:bold;
+                                           -fx-background-radius:9;
+                                           -fx-padding:11 22;
+                                           -fx-cursor:hand;"/>
+
+                            <Button text="Delete Result"
+                                    onAction="#deleteResult"
+                                    style="-fx-background-color:#C9434B;
+                                           -fx-text-fill:white;
+                                           -fx-font-weight:bold;
+                                           -fx-background-radius:9;
+                                           -fx-padding:11 22;
+                                           -fx-cursor:hand;"/>
+
+                            <Button text="Clear"
+                                    onAction="#clearFields"
+                                    style="-fx-background-color:#143440;
+                                           -fx-text-fill:#C7E3E8;
+                                           -fx-font-weight:bold;
+                                           -fx-border-color:#245363;
+                                           -fx-border-width:1;
+                                           -fx-border-radius:9;
+                                           -fx-background-radius:9;
+                                           -fx-padding:11 22;
+                                           -fx-cursor:hand;"/>
+
+                        </HBox>
+
+                    </VBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- GPA SUMMARY -->
+                    <!-- ================================================= -->
+
+                    <HBox spacing="18">
+
+                        <VBox alignment="CENTER"
+                              prefHeight="125"
+                              HBox.hgrow="ALWAYS"
+                              spacing="8"
+                              style="-fx-background-color:#0D2531;
+                                     -fx-background-radius:14;
+                                     -fx-border-color:#1C4655;
+                                     -fx-border-width:1;
+                                     -fx-border-radius:14;
+                                     -fx-padding:18;">
+
+                            <Label text="Semester GPA"
+                                   style="-fx-text-fill:#8FB9C4;
+                                          -fx-font-size:14px;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="semesterGPALabel"
+                                   text="0.00"
+                                   style="-fx-text-fill:#D8F0F4;
+                                          -fx-font-size:30px;
+                                          -fx-font-weight:bold;"/>
+
+                        </VBox>
+
+
+                        <VBox alignment="CENTER"
+                              prefHeight="125"
+                              HBox.hgrow="ALWAYS"
+                              spacing="8"
+                              style="-fx-background-color:#0D2531;
+                                     -fx-background-radius:14;
+                                     -fx-border-color:#1C4655;
+                                     -fx-border-width:1;
+                                     -fx-border-radius:14;
+                                     -fx-padding:18;">
+
+                            <Label text="Overall CGPA"
+                                   style="-fx-text-fill:#8FB9C4;
+                                          -fx-font-size:14px;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="overallCGPALabel"
+                                   text="0.00"
+                                   style="-fx-text-fill:#18C7CE;
+                                          -fx-font-size:30px;
+                                          -fx-font-weight:bold;"/>
+
+                        </VBox>
+
+                    </HBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- RESULT HISTORY -->
+                    <!-- ================================================= -->
+
+                    <VBox spacing="15"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:20;">
+
+                        <HBox alignment="CENTER_LEFT">
+
+                            <Label text="Result History"
+                                   style="-fx-font-size:20px;
+                                          -fx-font-weight:bold;
+                                          -fx-text-fill:#D8F0F4;"/>
+
+                            <Region HBox.hgrow="ALWAYS"/>
+
+                            <Label text="Student academic records"
+                                   style="-fx-text-fill:#6F919B;
+                                          -fx-font-size:12px;"/>
+
+                        </HBox>
+
+
+                        <TableView fx:id="resultTable"
+                                   prefHeight="300"
+                                   minHeight="250"
+                                   maxWidth="Infinity"
+                                   style="-fx-background-color:#0A202B;
+                                          -fx-control-inner-background:#0A202B;
+                                          -fx-border-color:#1B4655;
+                                          -fx-border-width:1;
+                                          -fx-border-radius:12;
+                                          -fx-background-radius:12;">
+
+                            <columns>
+
+                                <TableColumn fx:id="resultStudentColumn"
+                                             text="Student ID"
+                                             prefWidth="180"/>
+
+                                <TableColumn fx:id="resultCourseColumn"
+                                             text="Course Code"
+                                             prefWidth="150"/>
+
+                                <TableColumn fx:id="resultSemesterColumn"
+                                             text="Semester"
+                                             prefWidth="180"/>
+
+                                <TableColumn fx:id="resultMarksColumn"
+                                             text="Total Marks"
+                                             prefWidth="150"/>
+
+                                <TableColumn fx:id="resultGradeColumn"
+                                             text="Grade"
+                                             prefWidth="120"/>
+
+                                <TableColumn fx:id="resultGpaColumn"
+                                             text="GPA"
+                                             prefWidth="120"/>
+
+                            </columns>
+
+                        </TableView>
+
+                    </VBox>
+
+
+                    <Region minHeight="30"/>
+
+                </VBox>
+
+            </content>
+
+        </ScrollPane>
+
+    </center>
+
+</BorderPane>

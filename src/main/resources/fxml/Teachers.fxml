@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.sms.controller.TeacherController">
+
+    <!-- =========================================================
+         TOP BAR
+         ========================================================= -->
+
+    <top>
+
+        <VBox spacing="4"
+              styleClass="module-topbar">
+
+            <padding>
+                <Insets top="22"
+                        right="28"
+                        bottom="20"
+                        left="28"/>
+            </padding>
+
+            <HBox alignment="CENTER_LEFT"
+                  spacing="15">
+
+                <VBox spacing="4">
+
+                    <Label text="Teacher Management"
+                           styleClass="module-title"/>
+
+                    <Label text="Manage faculty members and academic information"
+                           styleClass="module-subtitle"/>
+
+                </VBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <!-- SEARCH -->
+
+                <TextField fx:id="searchField"
+                           promptText="Search by ID or Name..."
+                           prefWidth="280"
+                           prefHeight="40"
+                           styleClass="search-field"/>
+
+                <Button text="Search"
+                        onAction="#searchTeacher"
+                        prefHeight="40"
+                        styleClass="primary-button"/>
+
+                <Button text="Refresh"
+                        onAction="#refreshTable"
+                        prefHeight="40"
+                        styleClass="secondary-button"/>
+
+            </HBox>
+
+        </VBox>
+
+    </top>
+
+
+    <!-- =========================================================
+         CENTER
+         ========================================================= -->
+
+    <center>
+
+        <VBox spacing="22"
+              styleClass="module-background">
+
+            <padding>
+                <Insets top="25"
+                        right="28"
+                        bottom="35"
+                        left="28"/>
+            </padding>
+
+
+            <!-- =================================================
+                 TEACHER INFORMATION CARD
+                 ================================================= -->
+
+            <VBox spacing="18"
+                  styleClass="form-card">
+
+                <!-- CARD HEADER -->
+
+                <HBox alignment="CENTER_LEFT">
+
+                    <VBox spacing="4">
+
+                        <Label text="Teacher Information"
+                               styleClass="section-title"/>
+
+                        <Label text="Enter or update faculty information"
+                               styleClass="section-description"/>
+
+                    </VBox>
+
+                    <Region HBox.hgrow="ALWAYS"/>
+
+                    <Label text="FACULTY PROFILE"
+                           styleClass="form-badge"/>
+
+                </HBox>
+
+
+                <!-- FORM -->
+
+                <GridPane hgap="18"
+                          vgap="14">
+
+                    <columnConstraints>
+
+                        <ColumnConstraints percentWidth="17"/>
+
+                        <ColumnConstraints percentWidth="33"/>
+
+                        <ColumnConstraints percentWidth="17"/>
+
+                        <ColumnConstraints percentWidth="33"/>
+
+                    </columnConstraints>
+
+
+                    <!-- =========================
+                         TEACHER ID
+                         ========================= -->
+
+                    <Label text="Teacher ID"
+                           styleClass="field-label"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="teacherIdField"
+                               promptText="Enter Teacher ID"
+                               prefHeight="40"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="1"/>
+
+
+                    <!-- =========================
+                         FULL NAME
+                         ========================= -->
+
+                    <Label text="Full Name"
+                           styleClass="field-label"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="2"/>
+
+                    <TextField fx:id="nameField"
+                               promptText="Enter Full Name"
+                               prefHeight="40"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="3"/>
+
+
+                    <!-- =========================
+                         DEPARTMENT
+                         ========================= -->
+
+                    <Label text="Department"
+                           styleClass="field-label"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="departmentField"
+                               promptText="Example: CSE"
+                               prefHeight="40"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="1"/>
+
+
+                    <!-- =========================
+                         DESIGNATION
+                         ========================= -->
+
+                    <Label text="Designation"
+                           styleClass="field-label"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="2"/>
+
+                    <TextField fx:id="designationField"
+                               promptText="Example: Lecturer"
+                               prefHeight="40"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="3"/>
+
+
+                    <!-- =========================
+                         EMAIL
+                         ========================= -->
+
+                    <Label text="Email"
+                           styleClass="field-label"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="emailField"
+                               promptText="Enter Email Address"
+                               prefHeight="40"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="1"/>
+
+
+                    <!-- =========================
+                         PHONE
+                         ========================= -->
+
+                    <Label text="Phone"
+                           styleClass="field-label"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="2"/>
+
+                    <TextField fx:id="phoneField"
+                               promptText="Enter Phone Number"
+                               prefHeight="40"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="3"/>
+
+                </GridPane>
+
+
+                <!-- =================================================
+                     ACTION BUTTONS
+                     ================================================= -->
+
+                <HBox spacing="10"
+                      alignment="CENTER_LEFT">
+
+                    <Button text="Add Teacher"
+                            onAction="#addTeacher"
+                            prefHeight="40"
+                            styleClass="primary-button"/>
+
+                    <Button text="Update"
+                            onAction="#updateTeacher"
+                            prefHeight="40"
+                            styleClass="secondary-button"/>
+
+                    <Button text="Delete"
+                            onAction="#deleteTeacher"
+                            prefHeight="40"
+                            styleClass="danger-button"/>
+
+                    <Button text="Clear"
+                            onAction="#clearFields"
+                            prefHeight="40"
+                            styleClass="outline-button"/>
+
+                </HBox>
+
+            </VBox>
+
+
+            <!-- =================================================
+                 TABLE HEADER
+                 ================================================= -->
+
+            <HBox alignment="CENTER_LEFT"
+                  spacing="10">
+
+                <VBox spacing="4">
+
+                    <Label text="Faculty Members"
+                           styleClass="section-title"/>
+
+                    <Label text="All registered teachers in the system"
+                           styleClass="section-description"/>
+
+                </VBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Label text="Scroll to view more records"
+                       styleClass="table-hint"/>
+
+            </HBox>
+
+
+            <!-- =================================================
+                 TEACHER TABLE
+                 ================================================= -->
+
+            <TableView fx:id="teacherTable"
+                       VBox.vgrow="ALWAYS"
+                       prefHeight="500"
+                       minHeight="400"
+                       styleClass="data-table">
+
+                <columns>
+
+                    <TableColumn fx:id="idColumn"
+                                 text="Teacher ID"
+                                 prefWidth="140"/>
+
+                    <TableColumn fx:id="nameColumn"
+                                 text="Full Name"
+                                 prefWidth="230"/>
+
+                    <TableColumn fx:id="departmentColumn"
+                                 text="Department"
+                                 prefWidth="160"/>
+
+                    <TableColumn fx:id="designationColumn"
+                                 text="Designation"
+                                 prefWidth="190"/>
+
+                    <TableColumn fx:id="emailColumn"
+                                 text="Email"
+                                 prefWidth="250"/>
+
+                    <TableColumn fx:id="phoneColumn"
+                                 text="Phone"
+                                 prefWidth="170"/>
+
+                </columns>
+
+            </TableView>
+
+
+            <Region minHeight="10"/>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

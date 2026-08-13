@@ -1,0 +1,1692 @@
+/* =========================================================
+   STUDENT MANAGEMENT SYSTEM
+   PREMIUM DARK GLASS UI
+   ========================================================= */
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #07131F;
+}
+
+
+/* =========================================================
+   LOGIN BACKGROUND
+   ========================================================= */
+
+.login-background {
+    -fx-background-color:
+        linear-gradient(
+            to bottom right,
+            #020617 0%,
+            #0B1735 45%,
+            #172554 100%
+        );
+}
+
+
+/* =========================================================
+   LOGIN MAIN CONTAINER
+   ========================================================= */
+
+.login-container {
+    -fx-background-color: rgba(15, 23, 42, 0.96);
+    -fx-background-radius: 24;
+
+    -fx-border-color: rgba(148, 163, 184, 0.22);
+    -fx-border-width: 1;
+    -fx-border-radius: 24;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.45),
+            35,
+            0.25,
+            0,
+            15
+        );
+}
+
+
+/* =========================================================
+   LOGIN BRAND PANEL
+   ========================================================= */
+
+.login-brand-panel {
+    -fx-background-color:
+        linear-gradient(
+            to bottom right,
+            #0B1220,
+            #102A56
+        );
+
+    -fx-background-radius: 24 0 0 24;
+}
+
+
+/* =========================================================
+   LOGIN LOGO
+   ========================================================= */
+
+.login-logo {
+    -fx-background-color:
+        linear-gradient(
+            to bottom right,
+            #3B82F6,
+            #2563EB
+        );
+
+    -fx-background-radius: 18;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(37, 99, 235, 0.55),
+            18,
+            0.25,
+            0,
+            5
+        );
+}
+
+.login-logo-text {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+
+/* =========================================================
+   LOGIN BRAND TEXT
+   ========================================================= */
+
+.brand-small {
+    -fx-text-fill: #60A5FA;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.brand-large {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.brand-description {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 14px;
+    -fx-line-spacing: 5px;
+}
+
+.brand-line {
+    -fx-background-color: #3B82F6;
+    -fx-background-radius: 5;
+}
+
+.brand-footer-title {
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.brand-footer-text {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 11px;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+   ========================================================= */
+
+.login-form-panel {
+    -fx-background-color: rgba(15, 23, 42, 0.97);
+    -fx-background-radius: 0 24 24 0;
+}
+
+.login-heading {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.login-description {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 13px;
+}
+
+.login-label {
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+
+/* =========================================================
+   LOGIN INPUT
+   ========================================================= */
+
+.login-input {
+    -fx-background-color: white;
+    -fx-text-fill: #111827;
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-border-color: #CBD5E1;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-padding: 0 14;
+    -fx-font-size: 14px;
+}
+
+.login-input:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #111827;
+    -fx-border-color: #94A3B8;
+}
+
+.login-input:focused {
+    -fx-background-color: white;
+    -fx-text-fill: #111827;
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-border-color: #3B82F6;
+    -fx-border-width: 1.5;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(59, 130, 246, 0.30),
+            12,
+            0.20,
+            0,
+            0
+        );
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-button {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #2563EB,
+            #3B82F6
+        );
+
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(37, 99, 235, 0.30),
+            12,
+            0.20,
+            0,
+            4
+        );
+}
+
+.login-button:hover {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #1D4ED8,
+            #2563EB
+        );
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(59, 130, 246, 0.45),
+            18,
+            0.25,
+            0,
+            5
+        );
+}
+
+.login-button:pressed {
+    -fx-background-color: #1E40AF;
+    -fx-effect: none;
+}
+
+.login-error {
+    -fx-text-fill: #F87171;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.login-footer {
+    -fx-text-fill: #475569;
+    -fx-font-size: 11px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    -fx-background-color:
+        linear-gradient(
+            to bottom right,
+            #0B1726 0%,
+            #10283A 55%,
+            #0A1B2A 100%
+        );
+
+    -fx-background-radius: 0 20 20 0;
+
+    -fx-padding: 20 14 18 14;
+
+    -fx-border-color: rgba(103, 232, 249, 0.16);
+    -fx-border-width: 0 1 0 0;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.45),
+            28,
+            0.22,
+            5,
+            0
+        );
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+   ========================================================= */
+
+.sidebar-logo {
+    -fx-text-fill: #E2F9FF;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-title {
+    -fx-text-fill: #F8FAFC;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #6B8798;
+    -fx-font-size: 8px;
+    -fx-font-weight: bold;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.nav-button {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #8FA8B8;
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-padding: 11 13;
+
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(67, 220, 220, 0.10);
+
+    -fx-text-fill: #DDFBFF;
+
+    -fx-border-color: rgba(67, 220, 220, 0.22);
+    -fx-border-width: 1;
+}
+
+.nav-button:pressed {
+    -fx-background-color: rgba(45, 224, 219, 0.30);
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logout-button {
+    -fx-background-color: rgba(255, 255, 255, 0.045);
+
+    -fx-text-fill: #91A8B7;
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-padding: 11 13;
+
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    -fx-border-color: rgba(255,255,255,0.06);
+
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: rgba(239, 68, 68, 0.18);
+    -fx-text-fill: #FCA5A5;
+
+    -fx-border-color: rgba(239, 68, 68, 0.30);
+}
+
+
+/* =========================================================
+   SYSTEM STATUS
+   ========================================================= */
+
+.status-title {
+    -fx-text-fill: #536D7E;
+    -fx-font-size: 8px;
+    -fx-font-weight: bold;
+}
+
+.status-dot {
+    -fx-background-color: #43E6B0;
+    -fx-background-radius: 50%;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(67, 230, 176, 0.70),
+            10,
+            0.35,
+            0,
+            0
+        );
+}
+
+.status-text {
+    -fx-text-fill: #7992A2;
+    -fx-font-size: 10px;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.topbar {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #0A1724,
+            #0B2633
+        );
+
+    -fx-border-color: rgba(85, 225, 229, 0.12);
+    -fx-border-width: 0 0 1 0;
+
+    -fx-padding: 14 24;
+}
+
+.page-title {
+    -fx-text-fill: #F3FBFF;
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+}
+
+.page-subtitle {
+    -fx-text-fill: #668391;
+    -fx-font-size: 10px;
+}
+
+.welcome-text {
+    -fx-text-fill: #DCEEF3;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.role-text {
+    -fx-text-fill: #69818F;
+    -fx-font-size: 9px;
+}
+
+
+/* =========================================================
+   DASHBOARD BACKGROUND
+   ========================================================= */
+
+.dashboard-background {
+    -fx-background-color:
+        linear-gradient(
+            to bottom right,
+            #07141F 0%,
+            #0A1D29 48%,
+            #07131F 100%
+        );
+}
+
+
+/* =========================================================
+   DASHBOARD HEADING
+   ========================================================= */
+
+.dashboard-heading {
+    -fx-text-fill: #F2FAFC;
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+}
+
+.dashboard-description {
+    -fx-text-fill: #708996;
+    -fx-font-size: 11px;
+}
+
+
+/* =========================================================
+   GLASS CARDS
+   ========================================================= */
+
+.dashboard-card,
+.activity-card,
+.card {
+    -fx-background-color:
+        linear-gradient(
+            to bottom right,
+            rgba(25, 52, 66, 0.90),
+            rgba(12, 30, 42, 0.92)
+        );
+
+    -fx-background-radius: 15;
+
+    -fx-border-color:
+        rgba(116, 226, 235, 0.16);
+
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+
+    -fx-padding: 18;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.30),
+            20,
+            0.18,
+            0,
+            5
+        );
+}
+
+.dashboard-card:hover,
+.activity-card:hover,
+.card:hover {
+    -fx-border-color:
+        rgba(75, 232, 225, 0.34);
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(57, 224, 220, 0.18),
+            22,
+            0.20,
+            0,
+            5
+        );
+}
+
+
+/* =========================================================
+   STAT ICONS
+   ========================================================= */
+
+.stat-icon-blue {
+    -fx-background-color: rgba(42, 166, 255, 0.16);
+    -fx-background-radius: 12;
+
+    -fx-border-color: rgba(42, 190, 255, 0.25);
+    -fx-border-radius: 12;
+}
+
+.stat-icon-purple {
+    -fx-background-color: rgba(177, 105, 255, 0.16);
+    -fx-background-radius: 12;
+
+    -fx-border-color: rgba(177, 105, 255, 0.25);
+    -fx-border-radius: 12;
+}
+
+.stat-icon-green {
+    -fx-background-color: rgba(47, 230, 169, 0.15);
+    -fx-background-radius: 12;
+
+    -fx-border-color: rgba(47, 230, 169, 0.25);
+    -fx-border-radius: 12;
+}
+
+.stat-icon-orange {
+    -fx-background-color: rgba(255, 193, 70, 0.15);
+    -fx-background-radius: 12;
+
+    -fx-border-color: rgba(255, 193, 70, 0.25);
+    -fx-border-radius: 12;
+}
+
+.stat-icon-text {
+    -fx-text-fill: #7BE7EE;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.stat-label {
+    -fx-text-fill: #6F8A99;
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+}
+
+.stat-number {
+    -fx-text-fill: #EFFBFF;
+    -fx-font-size: 29px;
+    -fx-font-weight: bold;
+}
+
+.stat-description {
+    -fx-text-fill: #698391;
+    -fx-font-size: 10px;
+}
+
+
+/* =========================================================
+   ACTIVITY
+   ========================================================= */
+
+.section-title {
+    -fx-text-fill: #EAF8FB;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.section-description {
+    -fx-text-fill: #6E8794;
+    -fx-font-size: 10px;
+}
+
+.activity-list {
+    -fx-background-color: rgba(5, 19, 29, 0.70);
+
+    -fx-background-radius: 11;
+
+    -fx-border-color: rgba(109, 220, 230, 0.10);
+    -fx-border-radius: 11;
+}
+
+.activity-list .list-cell {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #AFC4CD;
+
+    -fx-padding: 11 14;
+}
+
+.activity-list .list-cell:hover {
+    -fx-background-color: rgba(64, 219, 219, 0.08);
+}
+
+.activity-list .list-cell:selected {
+    -fx-background-color: rgba(64, 219, 219, 0.14);
+    -fx-text-fill: #E8FCFF;
+}
+
+
+/* =========================================================
+   QUICK ACCESS
+   ========================================================= */
+
+.quick-button {
+    -fx-background-color: rgba(255,255,255,0.045);
+
+    -fx-text-fill: #AFC4CD;
+
+    -fx-border-color: rgba(117, 222, 230, 0.13);
+    -fx-border-width: 1;
+    -fx-border-radius: 9;
+
+    -fx-background-radius: 9;
+
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.quick-button:hover {
+    -fx-background-color: rgba(52, 222, 219, 0.12);
+
+    -fx-border-color: rgba(73, 234, 229, 0.38);
+
+    -fx-text-fill: #DFFFFF;
+}
+
+
+/* =========================================================
+   GENERAL BUTTONS
+   ========================================================= */
+
+.button {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #159EA7,
+            #27C7C2
+        );
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 9;
+
+    -fx-padding: 9 17;
+
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #12B2BA,
+            #38DDD4
+        );
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(44, 222, 215, 0.28),
+            14,
+            0.20,
+            0,
+            3
+        );
+}
+
+.button:pressed {
+    -fx-background-color: #10878E;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-button {
+    -fx-background-color: rgba(255,255,255,0.06);
+
+    -fx-text-fill: #AFC7D0;
+
+    -fx-border-color: rgba(120,220,230,0.15);
+    -fx-border-width: 1;
+}
+
+.secondary-button:hover {
+    -fx-background-color: rgba(58,220,218,0.13);
+    -fx-text-fill: #E7FFFF;
+}
+
+
+/* =========================================================
+   DANGER BUTTON
+   ========================================================= */
+
+.danger-button {
+    -fx-background-color: #B83232;
+    -fx-text-fill: white;
+}
+
+.danger-button:hover {
+    -fx-background-color: #D13B3B;
+}
+
+
+/* =========================================================
+   TEXT FIELDS
+   ========================================================= */
+
+.text-field,
+.password-field,
+.combo-box,
+.date-picker {
+    -fx-background-color: rgba(8, 25, 36, 0.90);
+
+    -fx-border-color: rgba(117, 210, 221, 0.18);
+    -fx-border-width: 1;
+
+    -fx-border-radius: 9;
+    -fx-background-radius: 9;
+
+    -fx-padding: 9 12;
+
+    -fx-font-size: 12px;
+
+    -fx-text-fill: #E5F7FA;
+
+    -fx-prompt-text-fill: #58727F;
+}
+
+.text-field:hover,
+.password-field:hover,
+.combo-box:hover,
+.date-picker:hover {
+    -fx-border-color: rgba(100, 226, 232, 0.35);
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused,
+.date-picker:focused {
+    -fx-background-color: rgba(8, 28, 40, 0.98);
+
+    -fx-border-color: #42DDE0;
+    -fx-border-width: 1.3;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(66, 221, 224, 0.22),
+            10,
+            0.18,
+            0,
+            0
+        );
+}
+
+
+/* =========================================================
+   TEXT AREA
+   ========================================================= */
+
+.text-area {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: #081922;
+
+    -fx-border-color: rgba(117, 210, 221, 0.18);
+    -fx-border-width: 1;
+
+    -fx-border-radius: 9;
+    -fx-background-radius: 9;
+
+    -fx-font-size: 12px;
+
+    -fx-text-fill: #E5F7FA;
+    -fx-prompt-text-fill: #5E8491;
+}
+
+.text-area .content {
+    -fx-background-color: #081922;
+    -fx-background-radius: 8;
+}
+
+.text-area:focused {
+    -fx-border-color: #42DDE0;
+}
+
+/* =========================================================
+   COMBO BOX
+   ========================================================= */
+
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D9EEF2;
+    -fx-padding: 8 10;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #102632;
+
+    -fx-border-color: rgba(91, 220, 226, 0.20);
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #102632;
+    -fx-text-fill: #C8DCE2;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(55, 219, 218, 0.14);
+    -fx-text-fill: #E7FFFF;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #168F98;
+    -fx-text-fill: white;
+}
+
+
+/* =========================================================
+   DATE PICKER
+   ========================================================= */
+
+.date-picker .arrow-button {
+    -fx-background-color: rgba(40, 183, 189, 0.12);
+    -fx-background-radius: 0 9 9 0;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: rgba(48, 218, 218, 0.22);
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #69E3E4;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.table-view {
+    -fx-background-color: rgba(8, 24, 34, 0.88);
+
+    -fx-background-radius: 12;
+
+    -fx-border-radius: 12;
+
+    -fx-border-color: rgba(107, 218, 227, 0.13);
+    -fx-border-width: 1;
+
+    -fx-padding: 0;
+}
+
+
+/* Table Header */
+
+.table-view .column-header-background {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #123B4A,
+            #145363
+        );
+
+    -fx-background-radius: 12 12 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #DDF8FB;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+
+/* Table Rows */
+
+.table-row-cell {
+    -fx-cell-size: 42;
+
+    -fx-background-color: rgba(10, 28, 39, 0.82);
+
+    -fx-border-color:
+        transparent
+        transparent
+        rgba(105, 190, 202, 0.08)
+        transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(12, 33, 44, 0.82);
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgba(48, 211, 213, 0.08);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(47, 210, 214, 0.18);
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #E4FFFF;
+}
+
+.table-cell {
+    -fx-text-fill: #B9CDD5;
+    -fx-font-size: 11px;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #607C89;
+    -fx-font-size: 13px;
+}
+
+
+/* =========================================================
+   LIST VIEW
+   ========================================================= */
+
+.list-view {
+    -fx-background-color: rgba(8, 24, 34, 0.88);
+
+    -fx-background-radius: 10;
+
+    -fx-border-radius: 10;
+
+    -fx-border-color: rgba(102, 211, 222, 0.12);
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #B8CCD4;
+
+    -fx-padding: 10 12;
+}
+
+.list-cell:hover {
+    -fx-background-color: rgba(50, 214, 214, 0.08);
+}
+
+.list-cell:selected {
+    -fx-background-color: rgba(50, 214, 214, 0.16);
+    -fx-text-fill: #E5FFFF;
+}
+
+
+/* =========================================================
+   SCROLL PANE
+   ========================================================= */
+
+.scroll-pane,
+.dashboard-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane > .viewport,
+.dashboard-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+
+/* =========================================================
+   SCROLL BAR
+   ========================================================= */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(116, 188, 201, 0.30);
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: rgba(116, 222, 226, 0.50);
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 9;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 9;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.check-box {
+    -fx-font-size: 12px;
+    -fx-text-fill: #AFC6CE;
+}
+
+.check-box .box {
+    -fx-background-color: rgba(8, 25, 36, 0.90);
+
+    -fx-border-color: #53727F;
+
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+    -fx-padding: 4;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #1CAEB5;
+    -fx-border-color: #4DDEE1;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+
+/* =========================================================
+   SEPARATOR
+   ========================================================= */
+
+.separator .line {
+    -fx-border-color: rgba(113, 203, 212, 0.12);
+    -fx-border-width: 1 0 0 0;
+}
+
+
+/* =========================================================
+   FOCUS CLEANUP
+   ========================================================= */
+
+*:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+/* =========================================================
+   CONTENT BACKGROUND
+   ========================================================= */
+
+.content-background {
+    -fx-background-color:
+        linear-gradient(
+            to bottom right,
+            #07141F,
+            #0A202B
+        );
+}
+
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+.label {
+    -fx-font-family: "Segoe UI";
+}
+
+.form-label,
+.field-label {
+    -fx-text-fill: #9CB5BF;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+
+/* =========================================================
+   PREMIUM CYAN GLOW
+   ========================================================= */
+
+.glow-cyan {
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(61, 229, 226, 0.40),
+            18,
+            0.25,
+            0,
+            0
+        );
+}
+/* =========================================================
+   LOGIN INPUT - KEEP WHITE WHEN FOCUSED
+   ========================================================= */
+
+.login-input,
+.login-input:focused,
+.login-input:hover,
+.login-input:hover:focused {
+    -fx-background-color: white;
+    -fx-text-fill: #111827;
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+
+/* Username / Password focus glow */
+
+.login-input:focused {
+    -fx-background-color: white;
+
+    -fx-text-fill: #111827;
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-border-color: #22D3EE;
+    -fx-border-width: 1.5;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(34, 211, 238, 0.35),
+            14,
+            0.25,
+            0,
+            0
+        );
+}
+
+
+/* Password field inner text area */
+
+.login-input .text {
+    -fx-fill: #111827;
+}
+
+
+/* Keep caret visible */
+
+.login-input:focused .text {
+    -fx-fill: #111827;
+}
+/* =========================================================
+   TEXT VISIBILITY FIX
+   ========================================================= */
+
+/* General labels */
+.root .label {
+    -fx-text-fill: #D5E7EC;
+}
+
+
+/* =========================================================
+   SIDEBAR TEXT
+   ========================================================= */
+
+.root .sidebar .label {
+    -fx-text-fill: #B9D0D8;
+}
+
+.root .sidebar .sidebar-logo {
+    -fx-text-fill: #F0FCFF;
+}
+
+.root .sidebar .sidebar-title {
+    -fx-text-fill: #F1FAFC;
+}
+
+.root .sidebar .sidebar-subtitle {
+    -fx-text-fill: #7895A3;
+}
+
+
+/* Navigation */
+.root .sidebar .nav-button {
+    -fx-text-fill: #AFC5CE;
+}
+
+.root .sidebar .nav-button:hover {
+    -fx-text-fill: #E8FFFF;
+}
+
+.root .sidebar .nav-button.active {
+    -fx-text-fill: #E8FFFF;
+}
+
+.root .sidebar .logout-button {
+    -fx-text-fill: #AFC5CE;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.root .topbar .label {
+    -fx-text-fill: #D9EEF3;
+}
+
+.root .topbar .page-title {
+    -fx-text-fill: #F5FCFF;
+}
+
+.root .topbar .page-subtitle {
+    -fx-text-fill: #82A3B0;
+}
+
+.root .topbar .welcome-text {
+    -fx-text-fill: #F0FBFF;
+}
+
+.root .topbar .role-text {
+    -fx-text-fill: #7894A1;
+}
+
+
+/* =========================================================
+   PAGE HEADINGS
+   ========================================================= */
+
+.root .dashboard-heading {
+    -fx-text-fill: #F1FAFC;
+}
+
+.root .dashboard-description {
+    -fx-text-fill: #8AA6B2;
+}
+
+.root .section-title {
+    -fx-text-fill: #EDF9FC;
+}
+
+.root .section-description {
+    -fx-text-fill: #86A2AE;
+}
+
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.root .dashboard-card .label {
+    -fx-text-fill: #B7CDD5;
+}
+
+.root .dashboard-card .stat-label {
+    -fx-text-fill: #8BA8B4;
+}
+
+.root .dashboard-card .stat-number {
+    -fx-text-fill: #F0FBFF;
+}
+
+.root .dashboard-card .stat-description {
+    -fx-text-fill: #86A2AE;
+}
+
+.root .dashboard-card .stat-icon-text {
+    -fx-text-fill: #7BE7EE;
+}
+
+
+/* =========================================================
+   ACTIVITY CARD
+   ========================================================= */
+
+.root .activity-card .label {
+    -fx-text-fill: #C2D7DE;
+}
+
+.root .activity-card .section-title {
+    -fx-text-fill: #EFFBFD;
+}
+
+.root .activity-card .section-description {
+    -fx-text-fill: #86A2AE;
+}
+
+
+/* =========================================================
+   STUDENT / TEACHER / COURSE FORM
+   ========================================================= */
+
+/* Form labels such as:
+   Student ID
+   Full Name
+   Department
+   Gender
+   Email
+   Phone
+   Address
+*/
+
+.root .field-label,
+.root .form-label {
+    -fx-text-fill: #C8DCE2;
+    -fx-font-weight: bold;
+}
+
+.root .card .field-label,
+.root .card .form-label {
+    -fx-text-fill: #C8DCE2;
+}
+
+
+/* Section headings */
+.root .card > .label {
+    -fx-text-fill: #DCEEF2;
+}
+
+
+/* =========================================================
+   SEARCH / TOOLBAR TEXT
+   ========================================================= */
+
+.root .label {
+    -fx-font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLE TEXT
+   ========================================================= */
+
+.root .table-view .table-cell {
+    -fx-text-fill: #C5D9DF;
+}
+
+.root .table-view .column-header .label {
+    -fx-text-fill: #E3F8FB;
+}
+
+.root .table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: #F1FFFF;
+}
+
+
+/* =========================================================
+   INPUT TEXT
+   ========================================================= */
+
+.root .text-field {
+    -fx-text-fill: #DDF3F6;
+    -fx-prompt-text-fill: #63818E;
+}
+
+.root .password-field {
+    -fx-text-fill: #DDF3F6;
+    -fx-prompt-text-fill: #63818E;
+}
+
+
+/* =========================================================
+   COMBO BOX TEXT
+   ========================================================= */
+
+.root .combo-box {
+    -fx-text-fill: #DDF3F6;
+}
+
+.root .combo-box .list-cell {
+    -fx-text-fill: #DDF3F6;
+}
+
+
+/* =========================================================
+   DATE PICKER
+   ========================================================= */
+
+.root .date-picker {
+    -fx-text-fill: #DDF3F6;
+}
+
+
+/* =========================================================
+   BUTTON TEXT
+   ========================================================= */
+
+.root .button {
+    -fx-text-fill: white;
+}
+
+.root .secondary-button {
+    -fx-text-fill: #C5DADF;
+}
+
+.root .quick-button {
+    -fx-text-fill: #C5DADF;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.root .status-title {
+    -fx-text-fill: #6F8B99;
+}
+
+.root .status-text {
+    -fx-text-fill: #9BB3BD;
+}
+
+
+/* =========================================================
+   SETTINGS / OTHER PAGE CONTENT
+   ========================================================= */
+
+.root .content-background .label {
+    -fx-text-fill: #C7DBE1;
+}
+
+.root .content-background .section-title {
+    -fx-text-fill: #EFFBFD;
+}
+
+.root .content-background .section-description {
+    -fx-text-fill: #86A2AE;
+}
+
+
+/* =========================================================
+   KEEP LOGIN TEXT CORRECT
+   ========================================================= */
+
+.root .login-heading {
+    -fx-text-fill: white;
+}
+
+.root .login-description {
+    -fx-text-fill: #94A3B8;
+}
+
+.root .login-label {
+    -fx-text-fill: #CBD5E1;
+}
+
+.root .login-footer {
+    -fx-text-fill: #475569;
+}
+
+.root .brand-small {
+    -fx-text-fill: #60A5FA;
+}
+
+.root .brand-large {
+    -fx-text-fill: white;
+}
+
+.root .brand-description {
+    -fx-text-fill: #94A3B8;
+}
+/* =========================================================
+   FINAL LOGIN INPUT FIX
+   IMPORTANT: KEEP THIS AT THE VERY BOTTOM OF style.css
+   ========================================================= */
+
+/* Username + Password fields */
+.root .login-input {
+    -fx-background-color: #FFFFFF;
+
+    -fx-text-fill: #111827;
+
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-border-color: #334155;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-font-size: 14px;
+}
+
+
+/* Username / Password when mouse is over */
+.root .login-input:hover {
+    -fx-background-color: #FFFFFF;
+
+    -fx-text-fill: #111827;
+
+    -fx-border-color: #64748B;
+}
+
+
+/* Username / Password when clicked */
+.root .login-input:focused {
+    -fx-background-color: #FFFFFF;
+
+    -fx-text-fill: #111827;
+
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-border-color: #22D3EE;
+    -fx-border-width: 1.5;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(34, 211, 238, 0.40),
+            14,
+            0.25,
+            0,
+            0
+        );
+}
+
+
+/* =========================================================
+   TEXT INSIDE LOGIN TEXTFIELD
+   ========================================================= */
+
+.root .login-input .text {
+    -fx-fill: #111827;
+}
+
+
+/* Focused text */
+.root .login-input:focused .text {
+    -fx-fill: #111827;
+}
+
+
+/* =========================================================
+   PASSWORD DOTS
+   ========================================================= */
+
+.root .login-input .text {
+    -fx-fill: #111827;
+}
+
+
+/* =========================================================
+   LOGIN LABELS
+   ========================================================= */
+
+.root .login-label {
+    -fx-text-fill: #E2E8F0;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+
+/* =========================================================
+   LOGIN DESCRIPTION
+   ========================================================= */
+
+.root .login-description {
+    -fx-text-fill: #94A3B8;
+}
+
+
+/* =========================================================
+   LOGIN HEADING
+   ========================================================= */
+
+.root .login-heading {
+    -fx-text-fill: #FFFFFF;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.root .login-button {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #18AAB4,
+            #29C6C2
+        );
+
+    -fx-text-fill: #FFFFFF;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10;
+
+    -fx-cursor: hand;
+}
+
+.root .login-button:hover {
+    -fx-background-color:
+        linear-gradient(
+            to right,
+            #13BBC3,
+            #35D8D2
+        );
+
+    -fx-text-fill: #FFFFFF;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(34, 211, 238, 0.35),
+            15,
+            0.25,
+            0,
+            4
+        );
+}
+
+.root .login-button:pressed {
+    -fx-background-color: #15959D;
+}
+
+
+/* =========================================================
+   LOGIN ERROR
+   ========================================================= */
+
+.root .login-error {
+    -fx-text-fill: #F87171;
+}
+
+
+/* =========================================================
+   LOGIN FOOTER
+   ========================================================= */
+
+.root .login-footer {
+    -fx-text-fill: #64748B;
+}

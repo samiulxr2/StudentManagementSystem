@@ -1,0 +1,17 @@
+[
+    {
+        "departmentId": "CSE",
+        "departmentName": "Computer Science and Engineering",
+        "departmentHead": "Dr. John Doe"
+    },
+    {
+        "departmentId": "EEE",
+        "departmentName": "Electrical and Electronic Engineering",
+        "departmentHead": "Dr. Jane Smith"
+    },
+    {
+        "departmentId": "BBA",
+        "departmentName": "Business Administration",
+        "departmentHead": "Dr. Michael Brown"
+    }
+]

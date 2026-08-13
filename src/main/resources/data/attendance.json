@@ -1,0 +1,116 @@
+[
+  {
+    "attendanceId": "",
+    "studentId": "",
+    "courseCode": "",
+    "date": ""
+  },
+  {
+    "attendanceId": "ATT-0001",
+    "studentId": "251-15-500",
+    "courseCode": "CSE221",
+    "teacherId": "234567891",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-09",
+    "status": "Present"
+  },
+  {
+    "attendanceId": "ATT-0002",
+    "studentId": "251-15-662",
+    "courseCode": "CSE221",
+    "teacherId": "234567891",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-09",
+    "status": "Absent"
+  },
+  {
+    "attendanceId": "ATT-0003",
+    "studentId": "251-15-965",
+    "courseCode": "CSE221",
+    "teacherId": "234567891",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-09",
+    "status": "Present"
+  },
+  {
+    "attendanceId": "ATT-0004",
+    "studentId": "251-15-500",
+    "courseCode": "CSE221",
+    "teacherId": "234567891",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-04",
+    "status": "Absent"
+  },
+  {
+    "attendanceId": "ATT-0005",
+    "studentId": "251-15-662",
+    "courseCode": "CSE221",
+    "teacherId": "234567891",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-04",
+    "status": "Present"
+  },
+  {
+    "attendanceId": "ATT-0006",
+    "studentId": "251-15-965",
+    "courseCode": "CSE221",
+    "teacherId": "234567891",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-04",
+    "status": "Absent"
+  },
+  {
+    "attendanceId": "ATT-0007",
+    "studentId": "251-15-500",
+    "courseCode": "CSE221",
+    "teacherId": "234567890",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-11",
+    "status": "Present"
+  },
+  {
+    "attendanceId": "ATT-0008",
+    "studentId": "251-15-662",
+    "courseCode": "CSE221",
+    "teacherId": "234567890",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-11",
+    "status": "Absent"
+  },
+  {
+    "attendanceId": "ATT-0009",
+    "studentId": "251-15-965",
+    "courseCode": "CSE221",
+    "teacherId": "234567890",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "date": "2026-08-11",
+    "status": "Present"
+  }
+]

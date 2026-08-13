@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.sms.controller.AttendanceController"
+            style="-fx-background-color:#071923;">
+
+    <!-- ========================================================= -->
+    <!-- TOP BAR -->
+    <!-- ========================================================= -->
+
+    <top>
+
+        <HBox alignment="CENTER_LEFT"
+              spacing="15"
+              style="-fx-background-color:#0A202C;
+                     -fx-padding:18 24 18 24;
+                     -fx-border-color:#183B49;
+                     -fx-border-width:0 0 1 0;">
+
+            <Label text="Attendance Management"
+                   style="-fx-font-size:28px;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:#D8F0F4;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Refresh"
+                    onAction="#refreshTable"
+                    style="-fx-background-color:#143440;
+                           -fx-text-fill:#C7E3E8;
+                           -fx-font-size:13px;
+                           -fx-font-weight:bold;
+                           -fx-border-color:#245363;
+                           -fx-border-width:1;
+                           -fx-border-radius:9;
+                           -fx-background-radius:9;
+                           -fx-padding:10 20;
+                           -fx-cursor:hand;"/>
+
+        </HBox>
+
+    </top>
+
+
+    <!-- ========================================================= -->
+    <!-- CENTER -->
+    <!-- ========================================================= -->
+
+    <center>
+
+        <ScrollPane fitToWidth="true"
+                    fitToHeight="false"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    style="-fx-background-color:#071923;
+                           -fx-background:#071923;
+                           -fx-border-color:transparent;">
+
+            <content>
+
+                <VBox spacing="20"
+                      fillWidth="true"
+                      style="-fx-background-color:#071923;">
+
+                    <padding>
+                        <Insets top="24"
+                                right="24"
+                                bottom="30"
+                                left="24"/>
+                    </padding>
+
+
+                    <!-- ================================================= -->
+                    <!-- CLASS SELECTION -->
+                    <!-- ================================================= -->
+
+                    <VBox spacing="16"
+                          fillWidth="true"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:24;">
+
+                        <Label text="Select Class"
+                               style="-fx-font-size:21px;
+                                      -fx-font-weight:bold;
+                                      -fx-text-fill:#D8F0F4;"/>
+
+                        <Label text="Select the class information to load registered students."
+                               style="-fx-text-fill:#7699A4;
+                                      -fx-font-size:13px;"/>
+
+
+                        <!-- ================================================= -->
+                        <!-- SELECTION GRID -->
+                        <!-- ================================================= -->
+
+                        <GridPane hgap="16"
+                                  vgap="16"
+                                  maxWidth="Infinity">
+
+                            <columnConstraints>
+
+                                <ColumnConstraints percentWidth="15"/>
+
+                                <ColumnConstraints percentWidth="35"
+                                                   hgrow="ALWAYS"/>
+
+                                <ColumnConstraints percentWidth="15"/>
+
+                                <ColumnConstraints percentWidth="35"
+                                                   hgrow="ALWAYS"/>
+
+                            </columnConstraints>
+
+
+                            <!-- SEMESTER -->
+
+                            <Label text="Semester"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <ComboBox fx:id="semesterBox"
+                                      promptText="Select Semester"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="0"
+                                      GridPane.columnIndex="1"
+                                      style="-fx-background-color:#102A36;
+                                             -fx-border-color:#245363;
+                                             -fx-border-width:1;
+                                             -fx-border-radius:9;
+                                             -fx-background-radius:9;
+                                             -fx-font-size:13px;"/>
+
+
+                            <!-- COURSE -->
+
+                            <Label text="Course"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <ComboBox fx:id="courseBox"
+                                      promptText="Select Course"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="0"
+                                      GridPane.columnIndex="3"
+                                      style="-fx-background-color:#102A36;
+                                             -fx-border-color:#245363;
+                                             -fx-border-width:1;
+                                             -fx-border-radius:9;
+                                             -fx-background-radius:9;
+                                             -fx-font-size:13px;"/>
+
+
+                            <!-- BATCH -->
+
+                            <Label text="Batch"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <ComboBox fx:id="batchBox"
+                                      promptText="Select Batch"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="1"
+                                      GridPane.columnIndex="1"
+                                      style="-fx-background-color:#102A36;
+                                             -fx-border-color:#245363;
+                                             -fx-border-width:1;
+                                             -fx-border-radius:9;
+                                             -fx-background-radius:9;
+                                             -fx-font-size:13px;"/>
+
+
+                            <!-- SECTION -->
+
+                            <Label text="Section"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="2"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <ComboBox fx:id="sectionBox"
+                                      promptText="Select Section"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="1"
+                                      GridPane.columnIndex="3"
+                                      style="-fx-background-color:#102A36;
+                                             -fx-border-color:#245363;
+                                             -fx-border-width:1;
+                                             -fx-border-radius:9;
+                                             -fx-background-radius:9;
+                                             -fx-font-size:13px;"/>
+
+
+                            <!-- DATE -->
+
+                            <Label text="Date"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="0"
+                                   style="-fx-text-fill:#AFCBD2;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <DatePicker fx:id="datePicker"
+                                        maxWidth="Infinity"
+                                        GridPane.rowIndex="2"
+                                        GridPane.columnIndex="1"
+                                        style="-fx-background-color:#102A36;
+                                               -fx-border-color:#245363;
+                                               -fx-border-width:1;
+                                               -fx-border-radius:9;
+                                               -fx-background-radius:9;
+                                               -fx-font-size:13px;"/>
+
+                        </GridPane>
+
+
+                        <!-- ================================================= -->
+                        <!-- BUTTONS -->
+                        <!-- ================================================= -->
+
+                        <HBox spacing="12">
+
+                            <Button text="Load Registered Students"
+                                    onAction="#loadStudents"
+                                    style="-fx-background-color:#18AEB5;
+                                           -fx-text-fill:white;
+                                           -fx-font-size:13px;
+                                           -fx-font-weight:bold;
+                                           -fx-background-radius:9;
+                                           -fx-padding:10 20;
+                                           -fx-cursor:hand;"/>
+
+                            <Button text="Clear"
+                                    onAction="#clearFields"
+                                    style="-fx-background-color:#143440;
+                                           -fx-text-fill:#C7E3E8;
+                                           -fx-font-size:13px;
+                                           -fx-font-weight:bold;
+                                           -fx-border-color:#245363;
+                                           -fx-border-width:1;
+                                           -fx-border-radius:9;
+                                           -fx-background-radius:9;
+                                           -fx-padding:10 20;
+                                           -fx-cursor:hand;"/>
+
+                        </HBox>
+
+                    </VBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- SUMMARY CARDS -->
+                    <!-- ================================================= -->
+
+                    <HBox spacing="18"
+                          fillHeight="true">
+
+
+                        <!-- TOTAL -->
+
+                        <VBox alignment="CENTER"
+                              prefWidth="200"
+                              prefHeight="105"
+                              HBox.hgrow="ALWAYS"
+                              spacing="6"
+                              style="-fx-background-color:#0D2531;
+                                     -fx-background-radius:14;
+                                     -fx-border-color:#1C4655;
+                                     -fx-border-width:1;
+                                     -fx-border-radius:14;
+                                     -fx-padding:15;">
+
+                            <Label text="Total Students"
+                                   style="-fx-text-fill:#8FB9C4;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="totalStudentLabel"
+                                   text="0"
+                                   style="-fx-text-fill:#D8F0F4;
+                                          -fx-font-size:26px;
+                                          -fx-font-weight:bold;"/>
+
+                        </VBox>
+
+
+                        <!-- PRESENT -->
+
+                        <VBox alignment="CENTER"
+                              prefWidth="200"
+                              prefHeight="105"
+                              HBox.hgrow="ALWAYS"
+                              spacing="6"
+                              style="-fx-background-color:#0D2531;
+                                     -fx-background-radius:14;
+                                     -fx-border-color:#1C4655;
+                                     -fx-border-width:1;
+                                     -fx-border-radius:14;
+                                     -fx-padding:15;">
+
+                            <Label text="Present"
+                                   style="-fx-text-fill:#8FB9C4;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="presentLabel"
+                                   text="0"
+                                   style="-fx-font-size:26px;
+                                          -fx-font-weight:bold;
+                                          -fx-text-fill:#35D399;"/>
+
+                        </VBox>
+
+
+                        <!-- ABSENT -->
+
+                        <VBox alignment="CENTER"
+                              prefWidth="200"
+                              prefHeight="105"
+                              HBox.hgrow="ALWAYS"
+                              spacing="6"
+                              style="-fx-background-color:#0D2531;
+                                     -fx-background-radius:14;
+                                     -fx-border-color:#1C4655;
+                                     -fx-border-width:1;
+                                     -fx-border-radius:14;
+                                     -fx-padding:15;">
+
+                            <Label text="Absent"
+                                   style="-fx-text-fill:#8FB9C4;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="absentLabel"
+                                   text="0"
+                                   style="-fx-font-size:26px;
+                                          -fx-font-weight:bold;
+                                          -fx-text-fill:#FF6670;"/>
+
+                        </VBox>
+
+
+                        <!-- LATE -->
+
+                        <VBox alignment="CENTER"
+                              prefWidth="200"
+                              prefHeight="105"
+                              HBox.hgrow="ALWAYS"
+                              spacing="6"
+                              style="-fx-background-color:#0D2531;
+                                     -fx-background-radius:14;
+                                     -fx-border-color:#1C4655;
+                                     -fx-border-width:1;
+                                     -fx-border-radius:14;
+                                     -fx-padding:15;">
+
+                            <Label text="Late"
+                                   style="-fx-text-fill:#8FB9C4;
+                                          -fx-font-size:13px;
+                                          -fx-font-weight:bold;"/>
+
+                            <Label fx:id="lateLabel"
+                                   text="0"
+                                   style="-fx-font-size:26px;
+                                          -fx-font-weight:bold;
+                                          -fx-text-fill:#F5B942;"/>
+
+                        </VBox>
+
+                    </HBox>
+
+
+                    <!-- ================================================= -->
+                    <!-- ATTENDANCE TABLE -->
+                    <!-- ================================================= -->
+
+                    <VBox spacing="15"
+                          fillWidth="true"
+                          style="-fx-background-color:#0D2531;
+                                 -fx-background-radius:16;
+                                 -fx-border-color:#1C4655;
+                                 -fx-border-width:1;
+                                 -fx-border-radius:16;
+                                 -fx-padding:20;">
+
+                        <HBox alignment="CENTER_LEFT">
+
+                            <Label text="Class Attendance"
+                                   style="-fx-font-size:20px;
+                                          -fx-font-weight:bold;
+                                          -fx-text-fill:#D8F0F4;"/>
+
+                            <Region HBox.hgrow="ALWAYS"/>
+
+                            <Label text="Change the status for each student."
+                                   style="-fx-text-fill:#6F919B;
+                                          -fx-font-size:12px;"/>
+
+                        </HBox>
+
+
+                        <TableView fx:id="attendanceTable"
+                                   prefHeight="500"
+                                   minHeight="400"
+                                   maxWidth="Infinity"
+                                   style="-fx-background-color:#0A202B;
+                                          -fx-control-inner-background:#0A202B;
+                                          -fx-background-radius:12;
+                                          -fx-border-color:#1B4655;
+                                          -fx-border-width:1;
+                                          -fx-border-radius:12;">
+
+                            <columns>
+
+                                <TableColumn fx:id="studentIdColumn"
+                                             text="Student ID"
+                                             prefWidth="160"/>
+
+                                <TableColumn fx:id="courseCodeColumn"
+                                             text="Course"
+                                             prefWidth="120"/>
+
+                                <TableColumn fx:id="semesterColumn"
+                                             text="Semester"
+                                             prefWidth="120"/>
+
+                                <TableColumn fx:id="batchColumn"
+                                             text="Batch"
+                                             prefWidth="100"/>
+
+                                <TableColumn fx:id="sectionColumn"
+                                             text="Section"
+                                             prefWidth="110"/>
+
+                                <TableColumn fx:id="dateColumn"
+                                             text="Date"
+                                             prefWidth="140"/>
+
+                                <TableColumn fx:id="statusColumn"
+                                             text="Attendance Status"
+                                             prefWidth="180"/>
+
+                            </columns>
+
+                        </TableView>
+
+
+                        <!-- SAVE -->
+
+                        <HBox alignment="CENTER_RIGHT"
+                              spacing="12">
+
+                            <Button text="Save Attendance"
+                                    onAction="#saveAttendance"
+                                    style="-fx-background-color:#18AEB5;
+                                           -fx-text-fill:white;
+                                           -fx-font-size:13px;
+                                           -fx-font-weight:bold;
+                                           -fx-background-radius:9;
+                                           -fx-padding:11 22;
+                                           -fx-cursor:hand;"/>
+
+                        </HBox>
+
+                    </VBox>
+
+
+                    <Region minHeight="30"/>
+
+                </VBox>
+
+            </content>
+
+        </ScrollPane>
+
+    </center>
+
+</BorderPane>

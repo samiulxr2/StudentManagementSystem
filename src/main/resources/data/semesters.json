@@ -1,0 +1,14 @@
+[
+    {
+        "semesterId": "SPRING",
+        "semesterName": "Spring"
+    },
+    {
+        "semesterId": "SUMMER",
+        "semesterName": "Summer"
+    },
+    {
+        "semesterId": "FALL",
+        "semesterName": "Fall"
+    }
+]

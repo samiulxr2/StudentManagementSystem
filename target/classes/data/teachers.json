@@ -1,0 +1,26 @@
+[
+  {
+    "teacherId": "234567890",
+    "fullName": "Nadim Sikder",
+    "department": "CSE",
+    "designation": "Lecturer",
+    "email": "nadim@diu.com.edu",
+    "phone": "01334567887"
+  },
+  {
+    "teacherId": "234567891",
+    "fullName": "Hasan Mahmud",
+    "department": "CSE",
+    "designation": "Lecturer",
+    "email": "hasan@diu.com.edu",
+    "phone": "01345678909"
+  },
+  {
+    "teacherId": "234567892",
+    "fullName": "Mueed Khan",
+    "department": "EEE",
+    "designation": "professor",
+    "email": "mueed@diu.com.edu",
+    "phone": "01945678074"
+  }
+]

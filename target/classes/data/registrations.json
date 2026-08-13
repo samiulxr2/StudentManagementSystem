@@ -1,0 +1,122 @@
+[
+  {
+    "registrationId": "REG-0001",
+    "studentId": "251-15-500",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "CSE221",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0002",
+    "studentId": "251-15-662",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "CSE221",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0003",
+    "studentId": "251-15-965",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "CSE221",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0004",
+    "studentId": "251-15-500",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "O1",
+    "courseCode": "CSE222",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0005",
+    "studentId": "251-15-500",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "AOL 101",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0006",
+    "studentId": "251-15-662",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "O1",
+    "courseCode": "CSE222",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0007",
+    "studentId": "251-15-662",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "AOL 101",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0008",
+    "studentId": "251-15-965",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "O1",
+    "courseCode": "CSE222",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0009",
+    "studentId": "251-15-965",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "AOL 101",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0010",
+    "studentId": "251-15-967",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "O1",
+    "courseCode": "CSE222",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0011",
+    "studentId": "251-15-967",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "CSE221",
+    "retake": false
+  },
+  {
+    "registrationId": "REG-0012",
+    "studentId": "251-15-967",
+    "semester": "Summer-2026",
+    "batch": "68",
+    "section": "O",
+    "labSection": "",
+    "courseCode": "AOL 101",
+    "retake": false
+  }
+]

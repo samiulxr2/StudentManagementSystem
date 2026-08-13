@@ -1,0 +1,26 @@
+[
+  {
+    "courseCode": "CSE222",
+    "courseName": "OOP Lab",
+    "credit": 1.5,
+    "teacherId": "234567890",
+    "semester": "spring 2026",
+    "courseType": "LAB"
+  },
+  {
+    "courseCode": "CSE221",
+    "courseName": "OOP",
+    "credit": 3.0,
+    "teacherId": "234567890",
+    "semester": "Fall 2026",
+    "courseType": "THEORY"
+  },
+  {
+    "courseCode": "AOL 101",
+    "courseName": "Art of Living",
+    "credit": 3.0,
+    "teacherId": "234567891",
+    "semester": "spring 2026",
+    "courseType": "THEORY"
+  }
+]

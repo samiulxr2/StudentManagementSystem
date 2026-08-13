@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sms.controller.SettingsController"
+            style="-fx-background-color:#071A26;">
+
+    <center>
+
+        <VBox spacing="24"
+              alignment="TOP_CENTER"
+              style="-fx-background-color:#071A26;">
+
+            <padding>
+                <Insets top="35"
+                        right="42"
+                        bottom="42"
+                        left="42"/>
+            </padding>
+
+            <!-- PAGE TITLE -->
+            <Label text="Settings"
+                   style="-fx-font-size:30px;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:#D9F3FF;"/>
+
+
+            <!-- SETTINGS CARD -->
+            <VBox spacing="18"
+                  alignment="CENTER"
+                  maxWidth="900"
+                  style="-fx-background-color:#0D2433;
+                         -fx-padding:35;
+                         -fx-background-radius:16;
+                         -fx-border-color:#173D50;
+                         -fx-border-width:1;
+                         -fx-border-radius:16;">
+
+                <!-- CURRENT USER -->
+                <Label text="Current User"
+                       style="-fx-font-size:13px;
+                              -fx-text-fill:#6F9CAF;"/>
+
+                <Label fx:id="usernameLabel"
+                       style="-fx-font-size:21px;
+                              -fx-font-weight:bold;
+                              -fx-text-fill:#D9F3FF;"/>
+
+
+                <!-- ROLE -->
+                <Label text="Role"
+                       style="-fx-font-size:13px;
+                              -fx-text-fill:#6F9CAF;"/>
+
+                <Label fx:id="roleLabel"
+                       style="-fx-font-size:20px;
+                              -fx-font-weight:bold;
+                              -fx-text-fill:#18C4CF;"/>
+
+
+                <!-- DIVIDER -->
+                <Separator style="-fx-background-color:#173D50;"/>
+
+
+                <!-- APPLICATION INFORMATION -->
+                <Label text="Student Management System"
+                       style="-fx-font-size:14px;
+                              -fx-text-fill:#8DB3C2;"/>
+
+                <Label text="Version 1.0"
+                       style="-fx-font-size:12px;
+                              -fx-text-fill:#607F8D;"/>
+
+
+                <!-- LOGOUT -->
+                <Button text="Logout"
+                        onAction="#logout"
+                        style="-fx-background-color:#18B8C4;
+                               -fx-text-fill:white;
+                               -fx-font-size:13px;
+                               -fx-font-weight:bold;
+                               -fx-background-radius:8;
+                               -fx-padding:10 26;
+                               -fx-cursor:hand;"/>
+
+            </VBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>
