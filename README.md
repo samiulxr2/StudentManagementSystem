@@ -384,7 +384,7 @@ It also demonstrates how OOP principles can be applied to develop a complete rea
 
 ## Developer
 
-**Samiul Islam**
+**Md. Samiul Islam**
 
 GitHub:
 https://github.com/samiulxr2
